@@ -20,6 +20,10 @@ class UserPassword extends BaseAuthentication implements UserPasswordInterface
         $this->storeVersion();
         $this->storeResources();
     }
+    
+    public function token() {
+	    return $this->tokenRepo->get();
+    }
 
     /**
      * Refresh authentication token by re-authenticating.
