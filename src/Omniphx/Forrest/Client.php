@@ -362,7 +362,7 @@ abstract class Client
     {
         $token = $this->tokenRepo->get();
         $accessToken = $token['access_token'];
-        $url = $token['id'];
+        $url = $token['id'] . "?version=latest";
 
         $options['headers']['Authorization'] = "OAuth $accessToken";
 

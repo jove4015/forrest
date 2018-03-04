@@ -20,7 +20,12 @@ class UserPassword extends BaseAuthentication implements UserPasswordInterface
         $this->storeVersion();
         $this->storeResources();
     }
-    
+
+    /**
+     * Return current auth session information.
+     *
+     * @return mixed $response
+     */    
     public function token() {
 	    return $this->tokenRepo->get();
     }
